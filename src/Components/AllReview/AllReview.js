@@ -1,25 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import LoadReview from '../../hooks/LoadReview';
 import SingleReview from '../SingleReview/SingleReview';
 
-const CustomerReview = () => {
+const AllReview = () => {
     const [reviews, setReviews] = LoadReview();
-    console.log(reviews);
     return (
         <div>
-            <h1 className='text-4xl text-center mt-10'>Customer Review</h1>
-
+            <h1 className="text-4xl text-center mt-10">Customer Says,</h1>
             <div className='flex md:flex-row flex-col flex-wrap justify-center container mx-auto m-5'>
                 {
                     reviews && reviews.slice(0, 3).map(review => <SingleReview key = {review._id} review = {review} />)
                 }
             </div>
-           <div className='text-center my-5'>
-                <Link to='/review'><button className='border p-3'>See all review</button></Link>
-           </div>
         </div>
     );
 };
 
-export default CustomerReview;
+export default AllReview;
