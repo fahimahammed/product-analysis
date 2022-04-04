@@ -9,7 +9,7 @@ const AllReview = () => {
             <h1 className="text-4xl text-center mt-10">Customer Says,</h1>
             <div className='flex md:flex-row flex-col flex-wrap justify-center container mx-auto m-5'>
                 {
-                    reviews && reviews.slice(0, 3).map(review => <SingleReview key = {review._id} review = {review} />)
+                    reviews && reviews.map(review => <SingleReview key = {review._id} review = {review} />)
                 }
             </div>
         </div>

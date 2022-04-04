@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import LoadReview from '../../hooks/LoadReview';
+import CustomLink from '../CustomLink/CustomLink';
 import SingleReview from '../SingleReview/SingleReview';
 
 const CustomerReview = () => {
@@ -16,7 +16,7 @@ const CustomerReview = () => {
                 }
             </div>
            <div className='text-center my-5'>
-                <Link to='/review'><button className='border p-3'>See all review</button></Link>
+                <CustomLink to='/review'><button className='border p-3'>See all review</button></CustomLink>
            </div>
         </div>
     );
